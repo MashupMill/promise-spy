@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - '10'
+before_install:
+  - npm i -g npm@latest
+install:
+  - npm ci
+script:
+  - npm test
+cache: npm
+deploy:
+  provider: npm
+  email: ammmze@gmail.com
+  skip_cleanup: true
+  api_key:
+    secure: Wk9py+3Z+XxV0b/zWPDuIc11HygC/M3LMBOwhCvqq8TtgcmH1NZehuLSXjHrbnNSqZqEYsRw0GR8LKU0nbRiQr5d2CoCthK2ry956vIEySL0kBQXBeSiwmwlcRMkkJLVWhXrI64q1cKOsBC7yHFYdSOUES7LSX4piZL5OdRb9q+6vVu75oEeTGVrX20jkz6c3VEH85BKh/CzSTfPeTksrREqHx4NCTzo8o/VKKxpg9+mn9VYKqki6msnu3Z5FOzq2phnKXMfd8Q2JWLjDMM/m1wcnnw22pGBL2cx5JYG0kNPSFPgOoKowYV2Tl+FeL5srIR5wErLVAs+OwZasRfZyg5zW76W3I6imQPJve7+hq91czqBwZz/Ye6XJ1V7p0xJm7s4qgi4DjPiayLZq7lkDNrt7pooTWw3VKmsjSLIQFOEln3cQVXOknuLtp11X0meK7U4Co6iItP1hZZvsIHh+BECE6AffOL02rUn0tGlwTOsrFprXkfuycTtmILu0zvLZo/Tq8nGEOu5HW+wFIP37FGoxD7Zl5hATmvmlTawv48q1rYw7E+iu+HfBBSl8GixzA66xKG1HpMsYeuirdjWOM34H3gtPiyKSNrzFMu7XsLS85FYXVfgpNo0lvDf9Dxaf3IYDbkcl6Y4W7CSsL/0Te0G+3Z8cVm3oxkhawojsSg=
+  on:
+    tags: true
+    repo: MashupMill/promise-spy
